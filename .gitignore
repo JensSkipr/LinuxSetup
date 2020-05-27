@@ -1,0 +1,10 @@
+# Blacklist all
+/**
+
+# Whitelist allowed
+!/.gitignore
+!/docker-compose.yml
+!/go_cover.sh
+!/LICENSE
+!/mongo-init.js
+!/README.md
