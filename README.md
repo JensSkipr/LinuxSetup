@@ -9,7 +9,7 @@ sudo apt update
 sudo apt -y dist-upgrade
 
 # Install additional software
-sudo apt -y install git gnome-tweak-tool vim htop
+sudo apt -y install git gnome-tweak-tool vim htop alacarte
 sudo snap install postman
 sudo snap install --classic slack
 sudo snap install --classic code # VS Code
