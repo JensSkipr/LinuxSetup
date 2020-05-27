@@ -9,12 +9,14 @@ sudo apt update
 sudo apt -y dist-upgrade
 
 # Install additional software
-sudo snap install gitkraken postman
+sudo apt -y install git gnome-tweak-tool vim htop
+sudo snap install postman
 sudo snap install --classic slack
-sudo snap install --classic go
 sudo snap install --classic code # VS Code
 sudo snap install --edge odrive # OpenDrive: Google Drive client
-sudo apt -y install git gnome-tweak-tool vim htop
+
+# Install Go
+sudo apt -y install golang
 
 # Install protobuf
 sudo snap install --classic protobuf
@@ -23,8 +25,16 @@ go get github.com/micro/protoc-gen-micro/v2
 go get github.com/vektra/mockery/.../
 
 # Workaround to fix ./generate_protos.sh
-mkdir ~/go/src
-echo -e "\nexport GOPATH=~/go" >> ~/.bashrc
+mkdir -p ~/go/src
+
+# Set Go env variables
+tee -a ~/.bashrc <<EOF
+
+# Skipr
+export PATH=$PATH:~/go/bin
+export GOPATH=~/go
+export GO111MODULE=on
+EOF
 
 # Install KeepassXC
 # https://keepassxc.org/download/#linux
@@ -35,7 +45,7 @@ sudo apt install keepassxc
 echo -e "\nv4l2-ctl -d 0 -c brightness=50,backlight_compensation=1" >> ~/.profile
 ```
 
-1. Add following startup applications in Tweak Tool: KeepassXC, OpenDrive
+1. Add following startup applications in Tweak Tool: KeepassXC, OpenDrive, Slack
 2. Replace VS Code settings with
 ```json
 {
@@ -44,4 +54,16 @@ echo -e "\nv4l2-ctl -d 0 -c brightness=50,backlight_compensation=1" >> ~/.profil
     "git.confirmSync": false,
     "git.autofetch": true
 }
+```
+
+3. Replace VS Code keyboard bindings with
+```json
+[
+    {
+        // Set CapsLock to backspace (Colemak fix)
+        "key": "capslock",
+        "command": "deleteLeft",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]
 ```
