@@ -80,7 +80,7 @@ Add following startup applications in Tweak Tool
 
 ### 2.2 VS Code
 Replace settings with
-```json
+```js
 {
     "workbench.startupEditor": "newUntitledFile",
     "go.toolsGopath": "~/go",
@@ -90,7 +90,7 @@ Replace settings with
 ```
 
 Replace keyboard bindings with
-```json
+```js
 [
     {
         // Set CapsLock to backspace (Colemak fix)
