@@ -61,17 +61,25 @@ sudo apt install keepassxc
 # Install Ungit
 sudo yarn global add ungit
 
-# Add application icon for Ungit and add to startup applications
-# Category: Programming
-# Name: Ungit background
-# Command: ungit --no-launchBrowser
+# Create application icon for Ungit
+#   Category: Programming
+#   Name: Ungit background
+#   Command: ungit --no-launchBrowser
 
 # Setup webcam settings at login
 echo -e "\nv4l2-ctl -d 0 -c brightness=50,backlight_compensation=1" >> ~/.profile
 ```
 
-1. Add following startup applications in Tweak Tool: KeepassXC, OpenDrive, Slack
-2. Replace VS Code settings with
+## 2. Finish setup
+### 2.1 Startup applications
+Add following startup applications in Tweak Tool
+- KeepassXC
+- OpenDrive
+- Slack
+- Ungit background
+
+### 2.2 VS Code
+Replace settings with
 ```json
 {
     "workbench.startupEditor": "newUntitledFile",
@@ -81,7 +89,7 @@ echo -e "\nv4l2-ctl -d 0 -c brightness=50,backlight_compensation=1" >> ~/.profil
 }
 ```
 
-3. Replace VS Code keyboard bindings with
+Replace keyboard bindings with
 ```json
 [
     {
