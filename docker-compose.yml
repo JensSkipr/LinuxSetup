@@ -26,4 +26,4 @@ services:
     command: web
     # network_mode: host
     ports:
-      - "127.0.0.1:8082:8082"
+      - "127.0.0.1:8083:8082"
