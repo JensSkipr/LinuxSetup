@@ -14,9 +14,9 @@ echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc
 # Install additional software
 sudo apt -y install git gnome-tweak-tool vim htop alacarte
 sudo snap install postman
+sudo snap install robo3t-snap
 sudo snap install --classic slack
 sudo snap install --classic code # VS Code
-sudo snap install --edge odrive # OpenDrive: Google Drive client
 
 # Set Go env variables
 tee -a ~/.bashrc <<EOF
@@ -77,7 +77,6 @@ echo -e "\nv4l2-ctl -d 0 -c brightness=50,backlight_compensation=1" >> ~/.profil
 ### 2.1 Startup applications
 Add following startup applications in Tweak Tool
 - KeepassXC
-- OpenDrive
 - Slack
 - Ungit background
 
