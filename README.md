@@ -8,6 +8,9 @@ Once Ubuntu is installed, run following commands
 sudo apt update
 sudo apt -y dist-upgrade
 
+# Workaround for wifi bug
+echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc/modprobe.d/x-fix-iwlwifi.conf
+
 # Install additional software
 sudo apt -y install git gnome-tweak-tool vim htop alacarte
 sudo snap install postman
