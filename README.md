@@ -17,6 +17,7 @@ sudo snap install postman
 sudo snap install robo3t-snap
 sudo snap install --classic slack
 sudo snap install --classic code # VS Code
+sudo snap install --edge keybase
 
 # Set Go env variables
 tee -a ~/.bashrc <<EOF
