@@ -17,7 +17,12 @@ sudo snap install postman
 sudo snap install robo3t-snap
 sudo snap install --classic slack
 sudo snap install --classic code # VS Code
-sudo snap install --edge keybase
+
+# Install Keybase
+# See https://keybase.io/docs/the_app/install_linux
+curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+sudo apt install ./keybase_amd64.deb
+run_keybase
 
 # Set Go env variables
 tee -a ~/.bashrc <<EOF
