@@ -16,8 +16,8 @@ db['srv-user-users'].insert({
             "credentials": [
                 {
                     "provider": "poppy",
-                    "login": "ludovic.laffineur@gmail.com",
-                    "password": "1qPBzvSh4RgM"
+                    "login": "apescheur@vulog.com",
+                    "password": "Cassy06"
                 },
                 {
                     "provider": "delijn"
