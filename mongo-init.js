@@ -1,9 +1,10 @@
 db['srv-user-users'].insert({
     "_id": "F4UOX2a6peWd9Th3KYFtkUpqKmQ2",
-    "first_name": "aWVR",
-    "last_name": "JGhQ",
+    "firebase_uid": "J7aAUEXZavUunkDBrjQuPCqBi8M2",
+    "first_name": "NotMocked",
+    "last_name": "LocalLast",
     "email": "cd9xk@email.com",
-    "phone_number": "+32475011999",
+    "phone_number": "+32475000000",
     "accepted_terms_and_conditions": true,
     "accepted_terms_and_conditions_version": "01/04/2019",
     "date_of_birth": ISODate("1919-09-18T00:00:00.000Z"),
