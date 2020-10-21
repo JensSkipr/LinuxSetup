@@ -24,6 +24,5 @@ services:
     image: micro/micro
     container_name: skipr-micro-web
     command: web
-    # network_mode: host
     ports:
       - "127.0.0.1:8083:8082"
