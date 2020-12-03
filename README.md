@@ -70,10 +70,16 @@ sudo apt install keepassxc
 # Install Ungit
 sudo yarn global add ungit
 
-# Create application icon for Ungit
-#   Category: Programming
-#   Name: Ungit background
-#   Command: ungit --no-launchBrowser
+# Create application icon for Ungit and add as startup application
+sudo tee /usr/share/applications/ungit.desktop <<EOF
+[Desktop Entry]
+Name=Ungit background
+Exec=ungit --no-launchBrowser
+Comment=
+Terminal=false
+Icon=gnome-panel-launcher
+Type=Application
+EOF
 
 # Setup webcam settings at login
 echo -e "\nv4l2-ctl -d 0 -c brightness=50,backlight_compensation=1" >> ~/.profile
