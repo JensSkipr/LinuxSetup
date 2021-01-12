@@ -82,7 +82,7 @@ Type=Application
 EOF
 
 # Setup webcam settings at login
-echo -e "\nv4l2-ctl -d 0 -c brightness=50,backlight_compensation=1" >> ~/.profile
+echo -e "\nv4l2-ctl -d 0 -c focus_auto=0,power_line_frequency=1" >> ~/.profile
 ```
 
 ## 2. Finish setup
