@@ -24,14 +24,32 @@ curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 sudo apt install ./keybase_amd64.deb
 run_keybase
 
+# Install Go
+# Based on https://golang.org/doc/install
+# Copy link to wanted go1.Y.Z.linux-amd64.tar.gz from https://golang.org/dl/
+GO_URL="https://golang.org/dl/go1.15.7.linux-amd64.tar.gz"
+wget ${GO_URL}
+sudo tar -C /usr/local -xzf go1.*.tar.gz
+echo 'export PATH="${PATH}:/usr/local/go/bin"' | sudo tee /etc/profile.d/add_go_to_path.sh
+source /etc/profile.d/add_go_to_path.sh
+
 # Set Go env variables
 tee -a ~/.bashrc <<EOF
 
 # Skipr
-export PATH=$PATH:~/go/bin
+export PATH=\$PATH:~/go/bin
 export GOPATH=~/go
 export GO111MODULE=on
 EOF
+
+# Install protobuf
+sudo snap install --classic protobuf
+go get -u github.com/golang/protobuf/protoc-gen-go
+go get github.com/micro/protoc-gen-micro/v2
+go get github.com/vektra/mockery/.../
+
+# Workaround to fix ./generate_protos.sh
+mkdir -p ~/go/src
 
 # Install docker
 # See https://docs.docker.com/engine/install/ubuntu/
@@ -46,18 +64,6 @@ sudo adduser ...   docker
 # ==============
 # Restart system
 # ==============
-
-# Install Go
-sudo apt -y install golang
-
-# Install protobuf
-sudo snap install --classic protobuf
-go get -u github.com/golang/protobuf/protoc-gen-go
-go get github.com/micro/protoc-gen-micro/v2
-go get github.com/vektra/mockery/.../
-
-# Workaround to fix ./generate_protos.sh
-mkdir -p ~/go/src
 
 # Install KeepassXC
 # https://keepassxc.org/download/#linux
