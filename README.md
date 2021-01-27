@@ -88,7 +88,11 @@ Type=Application
 EOF
 
 # Setup webcam settings at login
-echo -e "\nv4l2-ctl -d 0 -c focus_auto=0,power_line_frequency=1" >> ~/.profile
+tee -a ~/.profile <<EOF
+
+v4l2-ctl -d 0 -c focus_auto=0,power_line_frequency=1
+v4l2-ctl -d 0 -c focus_absolute=0
+EOF
 ```
 
 ## 2. Finish setup
