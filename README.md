@@ -13,9 +13,23 @@ echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc
 
 # Install additional software
 sudo apt -y install git gnome-tweak-tool vim htop alacarte
-sudo snap install postman
 sudo snap install --classic slack
 sudo snap install --classic code # VS Code
+
+# Install Postman
+# See https://learning.postman.com/docs/getting-started/installation-and-updates/#installing-postman-on-linux
+wget "https://dl.pstmn.io/download/latest/linux64" -O postman.tar.gz
+sudo tar -C /opt -xf postman.tar.gz
+tee ~/.local/share/applications/Postman.desktop <<EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=/opt/Postman/app/Postman %U
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+EOF
 
 # Install Mongo Compass
 # See https://docs.mongodb.com/compass/master/install
