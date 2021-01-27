@@ -14,9 +14,13 @@ echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc
 # Install additional software
 sudo apt -y install git gnome-tweak-tool vim htop alacarte
 sudo snap install postman
-sudo snap install robo3t-snap
 sudo snap install --classic slack
 sudo snap install --classic code # VS Code
+
+# Install Mongo Compass
+# See https://docs.mongodb.com/compass/master/install
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.25.0_amd64.deb
+sudo dpkg -i mongodb-compass_*_amd64.deb
 
 # Install Keybase
 # See https://keybase.io/docs/the_app/install_linux
