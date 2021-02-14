@@ -12,9 +12,13 @@ sudo apt -y dist-upgrade
 echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc/modprobe.d/x-fix-iwlwifi.conf
 
 # Install additional software
-sudo apt -y install git gnome-tweak-tool vim htop alacarte
-sudo snap install --classic slack
-sudo snap install --classic code # VS Code
+sudo apt -y install git gnome-tweak-tool vim htop curl
+
+# Install VS Code
+# See https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
+
+# Install Slack
+# See https://slack.com/intl/en-be/downloads/linux
 
 # Install Postman
 # See https://learning.postman.com/docs/getting-started/installation-and-updates/#installing-postman-on-linux
@@ -45,7 +49,7 @@ run_keybase
 # Install Go
 # Based on https://golang.org/doc/install
 # Copy link to wanted go1.Y.Z.linux-amd64.tar.gz from https://golang.org/dl/
-GO_URL="https://golang.org/dl/go1.15.7.linux-amd64.tar.gz"
+GO_URL="https://golang.org/dl/go1.15.8.linux-amd64.tar.gz"
 wget ${GO_URL}
 sudo tar -C /usr/local -xzf go1.*.tar.gz
 echo 'export PATH="${PATH}:/usr/local/go/bin"' | sudo tee /etc/profile.d/add_go_to_path.sh
@@ -88,11 +92,13 @@ sudo adduser ...   docker
 sudo add-apt-repository ppa:phoerious/keepassxc
 sudo apt install keepassxc
 
-# Install Yarn
-# See https://classic.yarnpkg.com/en/docs/install/#debian-stable
+# Install Node
+# See https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Install Ungit
-sudo yarn global add ungit
+sudo npm install -g ungit
 
 # Create application icon for Ungit and add as startup application
 sudo tee /usr/share/applications/ungit.desktop <<EOF
