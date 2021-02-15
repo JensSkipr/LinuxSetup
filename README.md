@@ -12,7 +12,7 @@ sudo apt -y dist-upgrade
 echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc/modprobe.d/x-fix-iwlwifi.conf
 
 # Install additional software
-sudo apt -y install git gnome-tweak-tool vim htop curl pavucontrol paprefs
+sudo apt -y install git gnome-tweak-tool vim htop curl pavucontrol paprefs chromium-browser
 
 # Install VS Code
 # See https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
