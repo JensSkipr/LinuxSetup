@@ -77,8 +77,8 @@ export GO111MODULE=on
 EOF
 
 # Install protobuf
-sudo snap install --classic protobuf
-go get -u github.com/golang/protobuf/protoc-gen-go
+sudo apt install protobuf-compiler
+go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.5
 go get github.com/micro/protoc-gen-micro/v2
 go get github.com/vektra/mockery/.../
 
