@@ -3,9 +3,8 @@
 
 # Whitelist allowed
 !/.gitignore
-!/docker-compose.yml
 !/go_cover.sh
 !/go_test_all.sh
+!/kube_connect.sh
 !/LICENSE
-!/mongo-init.js
 !/README.md
