@@ -99,6 +99,11 @@ sudo adduser ...   docker
 # Restart system
 # ==============
 
+# Setup directories
+# See https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#mapped-files-and-directories
+mkdir -p ~/.config/pgadmin
+sudo chown -R 5050:5050 ~/.config/pgadmin
+
 # Install helper scripts and configs
 chown 755 *.sh
 ln -s $(pwd)/go_cover.sh /usr/local/bin/go_cover
