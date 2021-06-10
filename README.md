@@ -24,7 +24,7 @@ paprefs \
 pavucontrol \
 python3-dev \
 v4l-utils \
-vim \
+vim
 
 # Install VS Code
 # See https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
@@ -51,12 +51,6 @@ EOF
 # See https://docs.mongodb.com/compass/master/install
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.25.0_amd64.deb
 sudo dpkg -i mongodb-compass_*_amd64.deb
-
-# Install pgAdmin
-# See https://www.pgadmin.org/download/pgadmin-4-apt/
-sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
-sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-sudo apt install pgadmin4-desktop
 
 # Install Keybase
 # See https://keybase.io/docs/the_app/install_linux
@@ -104,6 +98,13 @@ sudo adduser ...   docker
 # ==============
 # Restart system
 # ==============
+
+# Install helper scripts and configs
+chown 755 *.sh
+ln -s $(pwd)/go_cover.sh /usr/local/bin/go_cover
+ln -s $(pwd)/go_test_all.sh /usr/local/bin/go_test_all
+ln -s $(pwd)/kube_connect.sh /usr/local/bin/kube_connect
+ln -s $(pwd)/docker-compose.yml ~/docker-compose.yml
 
 # Install KeepassXC
 # https://keepassxc.org/download/#linux
