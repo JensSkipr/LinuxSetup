@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin
+        restart: unless-stopped
+        ports:
+        - "127.0.0.1:8432:80"
+        environment:
+        - "PGADMIN_DEFAULT_EMAIL=pgadmin@skipr.co"
+        - "PGADMIN_DEFAULT_PASSWORD=admin"
+        volumes:
+        - "/home/skipr/.config/pgadmin:/var/lib/pgadmin"
