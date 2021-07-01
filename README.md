@@ -78,8 +78,8 @@ EOF
 
 # Install protobuf
 sudo apt install protobuf-compiler
-go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.5
-go get github.com/micro/protoc-gen-micro/v2
+go get github.com/golang/protobuf/protoc-gen-go@v1.4.3
+go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3
 go get github.com/vektra/mockery/.../
 
 # Workaround to fix ./generate_protos.sh
