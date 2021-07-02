@@ -10,7 +10,7 @@
 CP=$(mktemp /tmp/coverage.XXXXX)
 
 # Run tests and store cover profile
-go test -coverprofile=${CP} -coverpkg . ./${1}
+go test -tags=integration -coverprofile=${CP} -coverpkg . ./${1}
 
 # Open page in your browser with the covered code
 go tool cover -html=${CP}
