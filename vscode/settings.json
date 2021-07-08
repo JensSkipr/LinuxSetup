@@ -3,7 +3,12 @@
     "editor.fontLigatures": true,
     "git.autofetch": true,
     "git.confirmSync": false,
+    "git.enableSmartCommit": true,
     "go.toolsGopath": "~/go",
+    "gopls": {
+        "build.allowModfileModifications": true,
+        "experimentalWorkspaceModule": true
+    },
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Dracula",
