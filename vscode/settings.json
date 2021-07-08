@@ -1,0 +1,11 @@
+{
+    "editor.fontFamily": "Cascadia Code",
+    "editor.fontLigatures": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "go.toolsGopath": "~/go",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Dracula",
+    "workbench.startupEditor": "none"
+}

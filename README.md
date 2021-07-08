@@ -152,24 +152,7 @@ Add following startup applications in Tweak Tool
 - Ungit background
 
 ### 2.2 VS Code
-Replace settings with
-```js
-{
-    "workbench.startupEditor": "newUntitledFile",
-    "go.toolsGopath": "~/go",
-    "git.confirmSync": false,
-    "git.autofetch": true
-}
-```
-
-Replace keyboard bindings with
-```js
-[
-    {
-        // Set CapsLock to backspace (Colemak fix)
-        "key": "capslock",
-        "command": "deleteLeft",
-        "when": "editorTextFocus && !editorReadonly"
-    }
-]
+```bash
+ln -fs "$(pwd)/vscode/settings.json" ~/.config/Code/User/settings.json
+ln -fs "$(pwd)/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
 ```

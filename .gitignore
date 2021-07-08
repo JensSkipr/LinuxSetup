@@ -9,3 +9,7 @@
 !/kube_connect.sh
 !/LICENSE
 !/README.md
+
+!/vscode/
+!/vscode/keybindings.json
+!/vscode/settings.json

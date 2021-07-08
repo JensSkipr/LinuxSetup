@@ -1,0 +1,9 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        // Set CapsLock to backspace (Colemak fix)
+        "key": "capslock",
+        "command": "deleteLeft",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]
