@@ -106,10 +106,11 @@ sudo chown -R 5050:5050 ~/.config/pgadmin
 
 # Install helper scripts and configs
 chown 755 *.sh
-ln -s $(pwd)/go_cover.sh /usr/local/bin/go_cover
-ln -s $(pwd)/go_test_all.sh /usr/local/bin/go_test_all
-ln -s $(pwd)/kube_connect.sh /usr/local/bin/kube_connect
-ln -s $(pwd)/docker-compose.yml ~/docker-compose.yml
+sudo ln -fs $(pwd)/go_cover.sh /usr/local/bin/go_cover
+sudo ln -fs $(pwd)/go_test_all.sh /usr/local/bin/go_test_all
+sudo ln -fs $(pwd)/go_tidy_all.sh /usr/local/bin/go_tidy_all
+sudo ln -fs $(pwd)/kube_connect.sh /usr/local/bin/kube_connect
+sudo ln -fs $(pwd)/docker-compose.yml ~/docker-compose.yml
 
 # Install KeepassXC
 # https://keepassxc.org/download/#linux

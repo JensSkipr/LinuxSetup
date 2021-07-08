@@ -6,6 +6,7 @@
 !/docker-compose.yml
 !/go_cover.sh
 !/go_test_all.sh
+!/go_tidy_all.sh
 !/kube_connect.sh
 !/LICENSE
 !/README.md
