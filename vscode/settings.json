@@ -1,17 +1,26 @@
 {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnSave": true,
     "editor.fontFamily": "Cascadia Code",
     "editor.fontLigatures": true,
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": true,
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+    "gitlens.hovers.enabled": false,
     "go.buildTags": "integration",
     "go.toolsGopath": "~/go",
+    "go.toolsManagement.autoUpdate": true,
     "gopls": {
         "build.allowModfileModifications": true,
         "experimentalWorkspaceModule": true
     },
+    "python.languageServer": "Pylance",
+    "python.showStartPage": false,
+    "redhat.telemetry.enabled": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Dracula Pro",
     "workbench.startupEditor": "none"
 }
