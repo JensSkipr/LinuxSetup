@@ -4,10 +4,12 @@ services:
         image: dpage/pgadmin4
         container_name: pgadmin
         restart: unless-stopped
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
         ports:
-        - "127.0.0.1:8432:80"
+            - "127.0.0.1:8432:80"
         environment:
-        - "PGADMIN_DEFAULT_EMAIL=pgadmin@skipr.co"
-        - "PGADMIN_DEFAULT_PASSWORD=admin"
+            - "PGADMIN_DEFAULT_EMAIL=pgadmin@skipr.co"
+            - "PGADMIN_DEFAULT_PASSWORD=admin"
         volumes:
-        - "/home/skipr/.config/pgadmin:/var/lib/pgadmin"
+            - "/home/skipr/.config/pgadmin:/var/lib/pgadmin"
