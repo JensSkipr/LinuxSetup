@@ -116,9 +116,11 @@ sudo ln -fs $(pwd)/kube_connect.sh /usr/local/bin/kube_connect
 ln -fs $(pwd)/docker-compose.yml ~/docker-compose.yml
 
 # Install Firefox configs
-# 1. Go to url "about:support"
-# 2. Click "Open Directory" next to "Profile Directory"
-# 3. Update below variable
+# 1. Go to url "about:config"
+# 2. Search and enable "toolkit.legacyUserProfileCustomizations.stylesheets"
+# 3. Go to url "about:support"
+# 4. Click "Open Directory" next to "Profile Directory"
+# 5. Update below variable
 FF_PROFILE_DIR="/home/skipr/.mozilla/firefox/ec3sg7nh.default-release"
 ln -fs $(pwd)/firefox/chrome "${FF_PROFILE_DIR}/chrome"
 
