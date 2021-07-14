@@ -1,8 +1,11 @@
 # Ubuntu Setup
+
 Setup Ubuntu for working at Skipr
 
 ## 1. Setup Ubuntu
+
 Once Ubuntu is installed, run following commands
+
 ```bash
 # Upgrade system
 sudo apt update
@@ -110,7 +113,14 @@ sudo ln -fs $(pwd)/go_cover.sh /usr/local/bin/go_cover
 sudo ln -fs $(pwd)/go_test_all.sh /usr/local/bin/go_test_all
 sudo ln -fs $(pwd)/go_tidy_all.sh /usr/local/bin/go_tidy_all
 sudo ln -fs $(pwd)/kube_connect.sh /usr/local/bin/kube_connect
-sudo ln -fs $(pwd)/docker-compose.yml ~/docker-compose.yml
+ln -fs $(pwd)/docker-compose.yml ~/docker-compose.yml
+
+# Install Firefox configs
+# 1. Go to url "about:support"
+# 2. Click "Open Directory" next to "Profile Directory"
+# 3. Update below variable
+FF_PROFILE_DIR="/home/skipr/.mozilla/firefox/ec3sg7nh.default-release"
+ln -fs $(pwd)/firefox/chrome "${FF_PROFILE_DIR}/chrome"
 
 # Install KeepassXC
 # https://keepassxc.org/download/#linux
@@ -146,13 +156,17 @@ EOF
 ```
 
 ## 2. Finish setup
+
 ### 2.1 Startup applications
+
 Add following startup applications in Tweak Tool
+
 - KeepassXC
 - Slack
 - Ungit background
 
 ### 2.2 VS Code
+
 ```bash
 ln -fs "$(pwd)/vscode/settings.json" ~/.config/Code/User/settings.json
 ln -fs "$(pwd)/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
