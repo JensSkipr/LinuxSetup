@@ -1,8 +1,9 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.formatOnSave": true,
+    "docker.showStartPage": false,
     "editor.fontFamily": "Cascadia Code",
     "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
     "explorer.confirmDelete": false,
     "extensions.ignoreRecommendations": true,
     "git.autofetch": true,
