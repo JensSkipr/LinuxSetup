@@ -1,0 +1,6 @@
+/* Completely hide the "title changed" notification dot on pinned tabs containing word "Mail" in the title */
+.tabbrowser-tab[label*="Mail"]
+  > .tab-stack
+  > .tab-content[pinned][titlechanged] {
+  background-image: none !important;
+}
