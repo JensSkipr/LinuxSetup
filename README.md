@@ -108,7 +108,8 @@ mkdir -p ~/.config/pgadmin
 sudo chown -R 5050:5050 ~/.config/pgadmin
 
 # Install helper scripts and configs
-chown 755 *.sh
+chmod 755 *.sh
+sudo ln -fs $(pwd)/clip_uuid.sh /usr/local/bin/clip_uuid
 sudo ln -fs $(pwd)/go_cover.sh /usr/local/bin/go_cover
 sudo ln -fs $(pwd)/go_test_all.sh /usr/local/bin/go_test_all
 sudo ln -fs $(pwd)/go_tidy_all.sh /usr/local/bin/go_tidy_all
