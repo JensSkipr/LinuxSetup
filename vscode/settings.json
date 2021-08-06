@@ -5,6 +5,7 @@
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
     "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -23,5 +24,8 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Dracula Pro",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
