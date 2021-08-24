@@ -171,6 +171,8 @@ Add following startup applications in Tweak Tool
 ### 2.2 VS Code
 
 ```bash
-ln -fs "$(pwd)/vscode/settings.json" ~/.config/Code/User/settings.json
-ln -fs "$(pwd)/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
+ln -fs "$(pwd)/vscode/settings.jsonc" ~/.config/Code/User/settings.json
+ln -fs "$(pwd)/vscode/keybindings.jsonc" ~/.config/Code/User/keybindings.json
+mkdir -p ~/.config/Code/User/snippets
+ln -fs "$(pwd)/vscode/snippets/go.jsonc" ~/.config/Code/User/snippets/go.json
 ```
