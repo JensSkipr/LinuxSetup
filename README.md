@@ -18,7 +18,7 @@ echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc
 sudo apt -y install \
 chromium-browser \
 curl \
-flameshot
+flameshot \
 git \
 gnome-tweak-tool \
 htop \
@@ -39,6 +39,7 @@ vim
 # See https://learning.postman.com/docs/getting-started/installation-and-updates/#installing-postman-on-linux
 wget "https://dl.pstmn.io/download/latest/linux64" -O postman.tar.gz
 sudo tar -C /opt -xf postman.tar.gz
+rm postman.tar.gz
 tee ~/.local/share/applications/Postman.desktop <<EOF
 [Desktop Entry]
 Encoding=UTF-8
@@ -52,23 +53,28 @@ EOF
 
 # Install Mongo Compass
 # See https://docs.mongodb.com/compass/master/install
-wget https://downloads.mongodb.com/compass/mongodb-compass_1.25.0_amd64.deb
-sudo dpkg -i mongodb-compass_*_amd64.deb
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb -O mongodb-compass.deb
+sudo dpkg -i mongodb-compass.deb
+sudo apt install -f
+rm mongodb-compass.deb
 
 # Install Keybase
 # See https://keybase.io/docs/the_app/install_linux
-curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-sudo apt install ./keybase_amd64.deb
+wget https://prerelease.keybase.io/keybase_amd64.deb -O keybase.deb
+sudo dpkg -i keybase.deb
+sudo apt install -f
+rm keybase.deb
 run_keybase
 
 # Install Go
 # Based on https://golang.org/doc/install
 # Copy link to wanted go1.Y.Z.linux-amd64.tar.gz from https://golang.org/dl/
-GO_URL="https://golang.org/dl/go1.15.8.linux-amd64.tar.gz"
-wget ${GO_URL}
-sudo tar -C /usr/local -xzf go1.*.tar.gz
+GO_URL="https://golang.org/dl/go1.16.7.linux-amd64.tar.gz"
+wget ${GO_URL} -O go.tar.gz
+sudo tar -C /usr/local -xzf go.tar.gz
 echo 'export PATH="${PATH}:/usr/local/go/bin"' | sudo tee /etc/profile.d/add_go_to_path.sh
 source /etc/profile.d/add_go_to_path.sh
+rm go.tar.gz
 
 # Set Go env variables
 tee -a ~/.bashrc <<EOF
@@ -80,7 +86,7 @@ export GO111MODULE=on
 EOF
 
 # Install protobuf
-sudo apt install protobuf-compiler
+sudo apt -y install protobuf-compiler
 go get github.com/golang/protobuf/protoc-gen-go@v1.4.3
 go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3
 go get github.com/vektra/mockery/.../
@@ -122,7 +128,7 @@ ln -fs $(pwd)/docker-compose.yml ~/docker-compose.yml
 # 3. Go to url "about:support"
 # 4. Click "Open Directory" next to "Profile Directory"
 # 5. Update below variable
-FF_PROFILE_DIR="/home/skipr/.mozilla/firefox/ec3sg7nh.default-release"
+FF_PROFILE_DIR="/home/skipr/.mozilla/firefox/n79tm659.default-release"
 ln -fs $(pwd)/firefox/chrome "${FF_PROFILE_DIR}/chrome"
 
 # Install KeepassXC
