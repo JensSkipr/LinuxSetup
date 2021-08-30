@@ -66,6 +66,11 @@ sudo apt install -f
 rm keybase.deb
 run_keybase
 
+# Install Google Cloud SDK
+# See https://cloud.google.com/sdk/docs/install#deb
+sudo apt-get install google-cloud-sdk kubectl
+gcloud init
+
 # Install Go
 # Based on https://golang.org/doc/install
 # Copy link to wanted go1.Y.Z.linux-amd64.tar.gz from https://golang.org/dl/
