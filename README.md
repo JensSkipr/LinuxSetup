@@ -71,6 +71,10 @@ run_keybase
 sudo apt-get install google-cloud-sdk kubectl
 gcloud init
 
+# Enable kubectl auto-complete
+# See https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/#enable-kubectl-autocompletion
+kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl
+
 # Install Go
 # Based on https://golang.org/doc/install
 # Copy link to wanted go1.Y.Z.linux-amd64.tar.gz from https://golang.org/dl/
