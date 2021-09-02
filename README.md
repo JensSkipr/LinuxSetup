@@ -195,9 +195,10 @@ ln -fs "$(pwd)/vscode/snippets/go.jsonc" ~/.config/Code/User/snippets/go.json
 Extensions
 
 ```
-ext install golang.go
-ext install eamodio.gitlens
 ext install 42crunch.vscode-openapi
-ext install zoellner.openapi-preview
 ext install bierner.markdown-mermaid
+ext install eamodio.gitlens
+ext install golang.go
+ext install zoellner.openapi-preview
+ext install zxh404.vscode-proto3
 ```
