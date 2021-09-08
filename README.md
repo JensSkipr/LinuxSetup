@@ -18,7 +18,6 @@ echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc
 sudo apt -y install \
 chromium-browser \
 curl \
-flameshot \
 git \
 gnome-tweak-tool \
 htop \
@@ -50,6 +49,10 @@ Terminal=false
 Type=Application
 Categories=Development;
 EOF
+
+# Install Flameshot
+# Could be installed using apt, but this is likely an old version
+# See https://github.com/flameshot-org/flameshot/releases
 
 # Install Mongo Compass
 # See https://docs.mongodb.com/compass/master/install
