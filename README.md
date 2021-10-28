@@ -99,9 +99,7 @@ EOF
 
 # Install protobuf
 sudo apt -y install protobuf-compiler
-go get github.com/golang/protobuf/protoc-gen-go@v1.4.3
-go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3
-go get github.com/vektra/mockery/.../
+# See README of https://github.com/skiprco/booking-api (go install ...)
 
 # Workaround to fix ./generate_protos.sh
 mkdir -p ~/go/src
