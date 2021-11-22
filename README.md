@@ -203,4 +203,5 @@ ext install esbenp.prettier-vscode
 ext install golang.go
 ext install zoellner.openapi-preview
 ext install zxh404.vscode-proto3
+ext install petli-full.jq-vscode
 ```

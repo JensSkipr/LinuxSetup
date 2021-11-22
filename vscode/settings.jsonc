@@ -25,6 +25,7 @@
     "redhat.telemetry.enabled": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
     "workbench.colorTheme": "Dracula Pro",
     "workbench.startupEditor": "none",
     "[json]": {
