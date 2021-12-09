@@ -201,7 +201,8 @@ ext install bierner.markdown-mermaid
 ext install eamodio.gitlens
 ext install esbenp.prettier-vscode
 ext install golang.go
+ext install jebbs.plantuml
+ext install petli-full.jq-vscode
 ext install zoellner.openapi-preview
 ext install zxh404.vscode-proto3
-ext install petli-full.jq-vscode
 ```
