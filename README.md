@@ -164,14 +164,6 @@ Terminal=false
 Icon=gnome-panel-launcher
 Type=Application
 EOF
-
-# Setup webcam settings at login
-tee -a ~/.profile <<EOF
-
-v4l2-ctl -d 0 -c focus_auto=0,power_line_frequency=1
-v4l2-ctl -d 0 -c focus_absolute=0
-v4l2-ctl -d 0 -c brightness=185
-EOF
 ```
 
 ## 2. Finish setup
