@@ -54,6 +54,14 @@ EOF
 # Could be installed using apt, but this is likely an old version
 # See https://github.com/flameshot-org/flameshot/releases
 
+# Install CPU Power Manager for Gnome Shell
+# See https://github.com/deinstapel/cpupower
+sudo add-apt-repository ppa:fin1ger/cpupower
+sudo apt-get update
+sudo apt-get install gnome-shell-extension-cpupower
+# Logout - Login (Required!!!)
+gnome-extensions enable cpupower@mko-sl.de
+
 # Install Mongo Compass
 # See https://docs.mongodb.com/compass/master/install
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb -O mongodb-compass.deb
