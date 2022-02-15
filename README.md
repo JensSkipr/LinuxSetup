@@ -26,7 +26,20 @@ paprefs \
 pavucontrol \
 python3-dev \
 v4l-utils \
-vim
+vim \
+apt-transport-https
+
+# Install Anti-virus and anti-malware
+# See https://packages.cisofy.com/community/#debian-ubuntu
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 013baa07180c50a7101097ef9de922f1c2fde6c4
+echo 'Acquire::Languages "none";' | sudo tee /etc/apt/apt.conf.d/99disable-translations
+echo "deb https://packages.cisofy.com/community/lynis/deb/ stable main" | sudo tee /etc/apt/sources.list.d/cisofy-lynis.list
+sudo apt update
+sudo apt install clamtk-gnome chkrootkit lynis
+
+# Useful commands to resolve Lynis suggestions
+# Purge all deleted packages. See https://askubuntu.com/a/687304
+dpkg --get-selections | awk '$2 == "deinstall" {print $1}' | xargs sudo apt-get purge --dry-run
 
 # Install VS Code
 # See https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions
