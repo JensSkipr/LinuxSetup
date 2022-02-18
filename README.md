@@ -144,13 +144,7 @@ sudo adduser ...   docker
 mkdir -p ~/.config/pgadmin
 sudo chown -R 5050:5050 ~/.config/pgadmin
 
-# Install helper scripts and configs
-chmod 755 *.sh
-sudo ln -fs $(pwd)/clip_uuid.sh /usr/local/bin/clip_uuid
-sudo ln -fs $(pwd)/go_cover.sh /usr/local/bin/go_cover
-sudo ln -fs $(pwd)/go_test_all.sh /usr/local/bin/go_test_all
-sudo ln -fs $(pwd)/go_tidy_all.sh /usr/local/bin/go_tidy_all
-sudo ln -fs $(pwd)/kube_connect.sh /usr/local/bin/kube_connect
+# Install Docker Compose file
 ln -fs $(pwd)/docker-compose.yml ~/docker-compose.yml
 
 # Install Firefox configs
