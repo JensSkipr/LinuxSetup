@@ -1,6 +1,7 @@
 # Ubuntu Setup
 
-Setup Ubuntu for working at Skipr
+Setup Ubuntu for working at Skipr.
+This guide assumes you have an existing system with Full Disk Encryption. You can easily enable this during install or see https://github.com/jenswbe/hercules for an example of a custom setup.
 
 ## 1. Setup Ubuntu
 
