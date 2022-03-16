@@ -17,6 +17,7 @@ echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc
 
 # Install additional software
 sudo apt -y install \
+network-manager-l2tp-gnome \
 chromium-browser \
 curl \
 git \
