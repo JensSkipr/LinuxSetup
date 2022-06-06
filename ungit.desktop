@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Ungit background
+Exec=ungit --no-launchBrowser
+Comment=
+Terminal=false
+Icon=gnome-panel-launcher
+Type=Application
