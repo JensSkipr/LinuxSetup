@@ -51,7 +51,7 @@ gnome-extensions enable cpupower@mko-sl.de
 # Install Node
 # See https://github.com/nodesource/distributions/blob/master/README.md#enterprise-linux-based-distributions
 curl -fsSL https://rpm.nodesource.com/setup_lts.x | sudo bash -
-sudo apt-get install -y nodejs
+sudo dnf install -y nodejs
 
 # Install Ungit
 sudo npm install -g ungit
