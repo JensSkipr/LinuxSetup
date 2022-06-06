@@ -54,7 +54,7 @@ curl -fsSL https://rpm.nodesource.com/setup_lts.x | sudo bash -
 sudo dnf install -y nodejs
 
 # Install Ungit
-sudo npm install -g ungit
+sudo npm install --location=global ungit
 sudo cp ungit.desktop /usr/share/applications/ungit.desktop
 ```
 
