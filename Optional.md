@@ -14,6 +14,11 @@ Follow code is not a script! Please run the commands manually.
 ### Generic
 
 ```bash
+# Use proposed VS Code settings
+ln -fs "$(pwd)/vscode/settings.jsonc" ~/.config/Code/User/settings.json
+mkdir -p ~/.config/Code/User/snippets
+ln -fs "$(pwd)/vscode/snippets/go.jsonc" ~/.config/Code/User/snippets/go.json
+
 # Install Firefox configs
 # 1. Go to url "about:config"
 # 2. Search and enable "toolkit.legacyUserProfileCustomizations.stylesheets"
