@@ -6,7 +6,7 @@ So, please only follow the instructions which seem usefull.
 ## Software
 
 - Flameshot (screenshot tool): https://github.com/flameshot-org/flameshot/releases
-- Terraform: https://www.terraform.io/downloads
+- Terraform: https://www.terraform.io/downloads (Run `terraform -install-autocomplete` afterwards)
 
 ## Setup
 
