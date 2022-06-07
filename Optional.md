@@ -6,6 +6,7 @@ So, please only follow the instructions which seem usefull.
 ## Software
 
 - Flameshot (screenshot tool): https://github.com/flameshot-org/flameshot/releases
+- Terraform: https://www.terraform.io/downloads
 
 ## Setup
 
@@ -61,12 +62,4 @@ sudo dnf install -y nodejs
 # Install Ungit
 sudo npm install --location=global ungit
 sudo cp ungit.desktop /usr/share/applications/ungit.desktop
-```
-
-## Fixes
-
-Workaround for wifi bug
-
-```bash
-echo "options iwlwifi bt_coex_active=N swcrypto=1 11n_disable=1" | sudo tee /etc/modprobe.d/x-fix-iwlwifi.conf
 ```
