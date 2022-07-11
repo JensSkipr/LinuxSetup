@@ -6,6 +6,7 @@ So, please only follow the instructions which seem usefull.
 ## Software
 
 - Flameshot (screenshot tool): https://github.com/flameshot-org/flameshot/releases
+- Nativefier (Create Electron/SSB app for website): https://github.com/nativefier/nativefier
 - Terraform: https://www.terraform.io/downloads (Run `terraform -install-autocomplete` afterwards)
 
 ## Setup
@@ -19,6 +20,20 @@ Follow code is not a script! Please run the commands manually.
 ln -fs "$(pwd)/vscode/settings.jsonc" ~/.config/Code/User/settings.json
 mkdir -p ~/.config/Code/User/snippets
 ln -fs "$(pwd)/vscode/snippets/go.jsonc" ~/.config/Code/User/snippets/go.json
+
+# Setup Nativefier env
+mkdir -p ~/.local/nativefier
+nativefier https://app.slack.com/client/T6Y6W6JRY ~/.local/nativefier/ # Creates an app
+nativefier --upgrade ~/.local/nativefier/Slack-linux-x64/ # Upgrades existing app
+tee "${HOME:?}/.local/share/applications/slack.desktop" <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=${HOME:?}/.local/nativefier/Slack-linux-x64/Slack
+Name=Slack
+Icon=${HOME:?}/.local/nativefier/Slack-linux-x64/resources/app/icon.png
+EOF
 
 # Install Firefox configs
 # 1. Go to url "about:config"
