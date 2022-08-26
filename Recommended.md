@@ -7,7 +7,7 @@ Feel free to swap out recommended software with another alternative.
 
 - Docker: https://docs.docker.com/engine/install/ubuntu/
 - Docker Compose: https://docs.docker.com/compose/install/compose-plugin/#install-using-the-repository
-- gcloud CLI/SDK and `kubectl`: https://cloud.google.com/sdk/docs/install#deb (install `google-cloud-sdk-gke-gcloud-auth-plugin`, not `google-cloud-cli`)
+- gcloud CLI and `kubectl`: https://cloud.google.com/sdk/docs/install#deb (install `google-cloud-cli-gke-gcloud-auth-plugin`, not `google-cloud-sdk-*`)
 - Keybase: https://keybase.io/docs/the_app/install_linux
 - Lynis (System hardening): https://packages.cisofy.com/community/#debian-ubuntu
 - Mongo Compass (Official GUI for MongoDB): https://docs.mongodb.com/compass/master/install
