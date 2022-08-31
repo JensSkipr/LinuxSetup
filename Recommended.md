@@ -11,6 +11,7 @@ Feel free to swap out recommended software with another alternative.
 - Keybase: https://keybase.io/docs/the_app/install_linux
 - Lynis (System hardening): https://packages.cisofy.com/community/#debian-ubuntu
 - Mongo Compass (Official GUI for MongoDB): https://docs.mongodb.com/compass/master/install
+- pgAdmin: Install `pgadmin4-desktop` from https://www.pgadmin.org/download/
 - Postman: https://learning.postman.com/docs/getting-started/installation-and-updates/#installing-postman-on-linux
 - ProtoBuf Compiler: See https://github.com/skiprco/booking-api/#install-protobuf-compiler
 - Slack: https://slack.com/intl/en-be/downloads/linux
