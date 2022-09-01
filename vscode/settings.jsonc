@@ -12,6 +12,8 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "github.gitAuthentication": false,
+  "github.gitProtocol": "ssh",
   "gitlens.codeLens.enabled": false,
   "gitlens.graph.statusBar.enabled": false,
   "gitlens.hovers.enabled": false,
