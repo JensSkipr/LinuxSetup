@@ -6,7 +6,7 @@ Feel free to swap out recommended software with another alternative.
 ## Software
 
 - Docker: https://docs.docker.com/engine/install/ubuntu/
-- Docker Compose: https://docs.docker.com/compose/install/compose-plugin/#install-using-the-repository
+- Docker Compose: https://docs.docker.com/compose/install/linux/#install-using-the-repository
 - gcloud CLI and `kubectl`: https://cloud.google.com/sdk/docs/install#deb (install `google-cloud-cli-gke-gcloud-auth-plugin`, not `google-cloud-sdk-*`)
 - Keybase: https://keybase.io/docs/the_app/install_linux
 - Lynis (System hardening): https://packages.cisofy.com/community/#debian-ubuntu
@@ -47,14 +47,6 @@ tee -a ~/.bashrc <<EOF
 export GOPATH=~/go
 export GO111MODULE=on
 EOF
-
-# Setup directories for pgAdmin
-# See https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#mapped-files-and-directories
-mkdir -p ~/.config/pgadmin ~/Documents/pgAdmin
-sudo chown -R 5050:5050 ~/.config/pgadmin ~/Documents/pgAdmin
-
-# Install Docker Compose file
-ln -fs $(pwd)/docker-compose.yml ~/docker-compose.yml
 ```
 
 ### Ubuntu
