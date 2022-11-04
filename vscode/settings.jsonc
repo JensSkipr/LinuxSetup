@@ -72,8 +72,7 @@
   "go.toolsGopath": "~/go",
   "go.toolsManagement.autoUpdate": true,
   "gopls": {
-    "build.allowModfileModifications": true,
-    "experimentalWorkspaceModule": true
+    "build.allowModfileModifications": true
   },
   "python.languageServer": "Pylance",
   "python.showStartPage": false,
