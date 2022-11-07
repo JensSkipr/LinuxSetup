@@ -71,9 +71,7 @@
   "go.buildTags": "integration",
   "go.toolsGopath": "~/go",
   "go.toolsManagement.autoUpdate": true,
-  "gopls": {
-    "build.allowModfileModifications": true
-  },
+  "gopls": {},
   "python.languageServer": "Pylance",
   "python.showStartPage": false,
   "redhat.telemetry.enabled": false,
