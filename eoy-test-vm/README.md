@@ -100,6 +100,17 @@ cd ~/Dev/web-mobility
 yarn # Installs dependencies
 ```
 
+On HOST:
+
+```bash
+VBoxManage list vms
+VM_NAME=""
+VBoxManage setextradata "${VM_NAME}" "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled" "1"
+```
+
+On Ubuntu GUEST:
+Settings => Date & Time => Disable "Automatic Date & Time"
+
 Required for each run:
 
 ```bash
