@@ -123,3 +123,5 @@ sudo docker compose up -d
 # Start WebMobility
 
 ```
+
+eoy-test-fm@skipr.co
