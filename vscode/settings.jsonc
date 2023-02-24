@@ -78,6 +78,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.sendKeybindingsToShell": true,
   "workbench.colorTheme": "Dracula Pro",
   "workbench.startupEditor": "none",
   "[javascript]": {
