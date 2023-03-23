@@ -27,7 +27,12 @@ Follow code is not a script! Please run the commands manually.
 ```bash
 # Enable kubectl auto-complete
 # See https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/#enable-kubectl-autocompletion
-kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl
+sudo tee /etc/bash_completion.d/kubectl <<EOF
+if which kubectl > /dev/null 2>&1
+then
+        source <(kubectl completion bash)
+fi
+EOF
 
 # Install Go
 # Below instructions assume you already installed Go using your package manager:
